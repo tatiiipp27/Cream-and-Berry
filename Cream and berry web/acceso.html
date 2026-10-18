@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida | Cream &amp; Berry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="acceso.css">
+</head>
+<body>
+    <main class="access-shell">
+        <section class="access-brand-panel">
+            <img src="img/logo-transparente.png" alt="Cream &amp; Berry" class="access-logo">
+            <div class="access-brand-copy"><span>FRESCO · ARTESANAL · DELICIOSO</span><h1>Tu momento<br><em>más dulce.</em></h1><p>Regístrate para personalizar tu pedido y guardar tus datos en este dispositivo.</p></div>
+            <img src="img/clasica-cutout.png" alt="Fresas con crema Cream &amp; Berry" class="access-product">
+            <img src="img/fresas-reales-cutout.png" alt="" class="access-berries">
+        </section>
+        <section class="access-form-panel">
+            <div class="access-card">
+                <span class="access-kicker">BIENVENIDA A CREAM &amp; BERRY</span>
+                <h2 id="accessTitle">Crea tu cuenta</h2>
+                <p id="accessDescription">Solo te tomará un momento. Tus datos se guardan localmente en este navegador.</p>
+                <div class="access-tabs" role="tablist">
+                    <button class="is-active" type="button" data-access-tab="register">Registrarme</button>
+                    <button type="button" data-access-tab="login">Ya tengo cuenta</button>
+                </div>
+                <form id="registerForm" class="access-form">
+                    <label>Nombre completo<div><i class="bi bi-person"></i><input id="registerName" type="text" autocomplete="name" required placeholder="Tu nombre"></div></label>
+                    <label>Teléfono<div><i class="bi bi-phone"></i><input id="registerPhone" type="tel" autocomplete="tel" required placeholder="0000-0000"></div></label>
+                    <label>Correo electrónico<div><i class="bi bi-envelope"></i><input id="registerEmail" type="email" autocomplete="email" required placeholder="correo@ejemplo.com"></div></label>
+                    <label>Contraseña<div><i class="bi bi-lock"></i><input id="registerPassword" type="password" minlength="4" autocomplete="new-password" required placeholder="Mínimo 4 caracteres"></div></label>
+                    <p class="access-error" id="registerError"></p>
+                    <button class="access-submit" type="submit">Crear cuenta y entrar <i class="bi bi-arrow-right"></i></button>
+                </form>
+                <form id="customerLoginForm" class="access-form" hidden>
+                    <label>Correo electrónico<div><i class="bi bi-envelope"></i><input id="customerEmail" type="email" autocomplete="email" required placeholder="correo@ejemplo.com"></div></label>
+                    <label>Contraseña<div><i class="bi bi-lock"></i><input id="customerPassword" type="password" autocomplete="current-password" required placeholder="Tu contraseña"></div></label>
+                    <p class="access-error" id="loginCustomerError"></p>
+                    <button class="access-submit" type="submit">Entrar a la tienda <i class="bi bi-arrow-right"></i></button>
+                </form>
+                <p class="local-note"><i class="bi bi-info-circle"></i> Demo sin base de datos: la cuenta funciona únicamente en este navegador.</p>
+            </div>
+        </section>
+    </main>
+    <script src="acceso.js"></script>
+</body>
+</html>

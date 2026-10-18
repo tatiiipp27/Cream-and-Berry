@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Cream & Berry</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <script>if(sessionStorage.getItem("creamBerryAdmin")!=="true")window.location.replace("login.html");</script>
+</head>
+
+<body>
+
+<nav class="admin-nav">
+    <div class="container nav-inner">
+        <a href="index.html" class="brand"><span class="brand-berry">🍓</span><span>Cream <b>&amp;</b> Berry</span></a>
+        <div class="admin-nav-actions"><a href="index.html" class="back-link">← Volver a la tienda</a><button type="button" class="logout-admin" onclick="cerrarSesionAdminPanel()">Cerrar sesión</button></div>
+    </div>
+</nav>
+
+<main class="container dashboard">
+
+    <div class="dashboard-heading">
+        <div>
+            <span class="eyebrow">PANEL DE ADMINISTRACIÓN</span>
+            <h1>Control de ventas </h1>
+            <p>Consulta pedidos, ingresos y productos vendidos desde un solo lugar.</p>
+        </div>
+
+        <button class="refresh-btn" onclick="renderDashboard()">↻ Actualizar</button>
+    </div>
+
+    <!-- KPIs -->
+    <section class="stats-grid">
+        <article class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div>
+                <span>Ventas totales</span>
+                <strong id="ventasTotales">$0.00</strong>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon">🛒</div>
+            <div>
+                <span>Pedidos</span>
+                <strong id="cantidadPedidos">0</strong>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon">🍓</div>
+            <div>
+                <span>Productos vendidos</span>
+                <strong id="productosVendidos">0</strong>
+            </div>
+        </article>
+
+        <article class="stat-card">
+            <div class="stat-icon">📦</div>
+            <div>
+                <span>Ticket promedio</span>
+                <strong id="ticketPromedio">$0.00</strong>
+            </div>
+        </article>
+    </section>
+
+    <section class="dashboard-grid">
+
+        <!-- Productos -->
+        <article class="panel">
+            <div class="panel-header">
+                <div>
+                    <span class="eyebrow">RENDIMIENTO</span>
+                    <h2>Productos más vendidos</h2>
+                </div>
+            </div>
+
+            <div id="productosChart" class="products-chart"></div>
+        </article>
+
+        <!-- Métodos de pago -->
+        <article class="panel">
+            <div class="panel-header">
+                <div>
+                    <span class="eyebrow">PAGOS</span>
+                    <h2>Métodos utilizados</h2>
+                </div>
+            </div>
+
+            <div id="pagosChart" class="payments-chart"></div>
+        </article>
+
+    </section>
+
+    <!-- Rentabilidad -->
+    <section class="panel profit-panel">
+        <div class="panel-header">
+            <div>
+                <span class="eyebrow">FINANZAS</span>
+                <h2>Estimación de costos y ganancias</h2>
+                <p>Configura el costo real por unidad según los datos de su proyecto.</p>
+            </div>
+        </div>
+
+        <div id="costInputs" class="cost-grid"></div>
+
+        <div class="finance-summary">
+            <div>
+                <span>Ingresos</span>
+                <strong id="financeRevenue">$0.00</strong>
+            </div>
+
+            <div>
+                <span>Costos</span>
+                <strong id="financeCosts">$0.00</strong>
+            </div>
+
+            <div class="profit-result">
+                <span>Ganancia estimada</span>
+                <strong id="financeProfit">$0.00</strong>
+            </div>
+        </div>
+
+        <small class="finance-note">
+            La ganancia se calcula como ingresos − costos. Los costos unitarios deben ser ingresados por ustedes con base en sus datos reales.
+        </small>
+    </section>
+
+    <!-- Pedidos -->
+    <section class="panel orders-panel">
+        <div class="panel-header orders-header">
+            <div>
+                <span class="eyebrow">HISTORIAL</span>
+                <h2>Pedidos recientes</h2>
+            </div>
+
+            <button class="danger-btn" onclick="borrarPedidos()">Borrar pedidos</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Pedido</th>
+                        <th>Cliente</th>
+                        <th>Sucursal</th>
+                        <th>Productos</th>
+                        <th>Pago</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody"></tbody>
+            </table>
+        </div>
+
+        <div id="emptyOrders" class="empty-state">
+            <div>🛒</div>
+            <h3>Aún no hay pedidos</h3>
+            <p>Realiza una compra desde la tienda para que aparezca aquí.</p>
+            <a href="index.html" class="primary-btn">Ir a la tienda</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="admin-footer">
+    <p>© 2026 Cream & Berry ·</p>
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>
