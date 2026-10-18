@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sucursales | Cream & Berry</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css?v=12"
+    >
+
+    <script>
+        if (!sessionStorage.getItem("creamBerryCliente")) {
+            window.location.replace("acceso.html");
+        }
+    </script>
+</head>
+
+
+<body class="page-sucursales">
+
+
+<!-- =====================================================
+                        NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+
+            <img
+                src="img/logo-transparente.png"
+                alt="Logo de Cream & Berry"
+                class="logo"
+            >
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+        >
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="promociones.html">
+                        Promociones
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="sucursales.html" aria-current="page">
+                        Sucursales
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- CARRITO -->
+
+            <button
+                class="btn cart-button"
+                onclick="abrirCarrito()"
+            >
+
+                <i class="bi bi-cart3"></i>
+
+                Carrito
+
+                <span
+                    id="contadorCarrito"
+                    class="cart-counter"
+                >
+                    0
+                </span>
+
+            </button>
+
+            <div class="customer-nav" data-customer-nav>
+                <span class="customer-avatar" data-customer-initial>CB</span>
+                <span class="customer-name" data-customer-name>Cliente</span>
+                <button type="button" onclick="cerrarSesionCliente()" aria-label="Cerrar sesión"><i class="bi bi-box-arrow-right"></i></button>
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+                        HERO
+===================================================== -->
+<main class="site-main">
+<!-- PROFESSIONAL ENHANCEMENT -->
+<section class="page-hero page-hero-locations"><div class="container page-hero-centered"><span class="eyebrow">CERCA DE TI</span><h1>Tres puntos.<br><em>El mismo sabor.</em></h1><p>Estamos en zonas accesibles de Ilopango, Alta Vista y Soyapango.</p></div></section>
+<section class="location-benefits"><div class="container"><div class="benefit-line"><div><i class="bi bi-geo-alt"></i><span><strong>Ubicaciones estratégicas</strong><small>Cerca de centros educativos y áreas comerciales.</small></span></div><div><i class="bi bi-clock"></i><span><strong>Planifica tu visita</strong><small>Consulta horarios y disponibilidad en redes sociales.</small></span></div><div><i class="bi bi-phone"></i><span><strong>Atención digital</strong><small>Encuentra novedades en Instagram y TikTok.</small></span></div></div><div class="social-order-card"><div><span class="eyebrow">HAZ TU PEDIDO</span><h2>Tu próximo antojo<br>empieza aquí.</h2></div><div class="social-order-actions"><a href="productos.html" class="btn btn-primary-custom">Ver el menú</a><a href="https://www.instagram.com/cream__.berry/" target="_blank" rel="noopener" class="btn btn-outline-custom"><i class="bi bi-instagram"></i> Instagram</a></div></div></div></section>
+<section
+    id="sucursales"
+    class="section locations-section"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                ENCUÉNTRANOS
+            </span>
+
+            <h2>
+                Nuestras sucursales 📍
+            </h2>
+
+            <p>
+                Estamos cerca de ti.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="location-card">
+
+                    <div class="location-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Ilopango
+                    </h3>
+
+                    <p>
+                        A la par de Comedor y Pupusería MEDA,
+                        frente a la Iglesia Católica,
+                        sobre la Calle a Las Cañas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="location-card">
+
+                    <div class="location-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Alta Vista
+                    </h3>
+
+                    <p>
+                        Centro Comercial Unicentro Alta Vista,
+                        Local 4G, a la par de la
+                        Despensa de Don Juan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="location-card">
+
+                    <div class="location-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Soyapango
+                    </h3>
+
+                    <p>
+                        Casco de Venecia, Km 21 Carretera de Oro,
+                        Paseo Venecia, a la par de Dollarcity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-md-5">
+
+                <a href="index.html" class="footer-brand-logo" aria-label="Ir al inicio de Cream & Berry"><img src="img/logo-transparente.png" alt="Cream & Berry"></a>
+
+                <p>
+                    La frescura que te endulza el día.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <h5>
+                    Enlaces
+                </h5>
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="productos.html">
+                    Productos
+                </a>
+
+                <a href="promociones.html">
+                    Promociones
+                </a>
+
+                <a href="nosotros.html">
+                    Nosotros
+                </a>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <h5>
+                    Redes sociales
+                </h5>
+
+
+                <div class="social-buttons">
+
+                    <a
+                        href="https://www.instagram.com/cream__.berry/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram de Cream & Berry"
+                    >
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.tiktok.com/@cream_.berry"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok de Cream & Berry"
+                    >
+
+                        <i class="bi bi-tiktok"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="copyright">
+
+            © 2026 Cream & Berry.
+            Todos los derechos reservados.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+                LOGIN ADMINISTRADOR
+===================================================== -->
+
+<div
+    class="modal fade admin-login-modal"
+    id="adminLoginModal"
+    tabindex="-1"
+    aria-labelledby="adminLoginModalLabel"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header admin-login-header">
+
+                <div class="w-100">
+
+                    <div class="admin-login-icon">
+
+                        <i class="bi bi-shield-lock"></i>
+
+                    </div>
+
+
+                    <h5 id="adminLoginModalLabel">
+                        Acceso administrativo
+                    </h5>
+
+
+                    <p>
+                        Panel privado de Cream & Berry
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-body admin-login-body">
+
+                <div
+                    id="loginError"
+                    class="login-error"
+                >
+
+                    <i class="bi bi-exclamation-circle"></i>
+
+                    Usuario o contraseña incorrectos.
+
+                </div>
+
+
+                <div class="admin-login-group">
+
+                    <label
+                        class="admin-login-label"
+                        for="adminUsuario"
+                    >
+                        Usuario
+                    </label>
+
+
+                    <div class="admin-login-input">
+
+                        <i class="bi bi-person input-icon"></i>
+
+
+                        <input
+                            type="text"
+                            id="adminUsuario"
+                            placeholder="Ingresa tu usuario"
+                            autocomplete="username"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-login-group">
+
+                    <label
+                        class="admin-login-label"
+                        for="adminPassword"
+                    >
+                        Contraseña
+                    </label>
+
+
+                    <div class="admin-login-input">
+
+                        <i class="bi bi-lock input-icon"></i>
+
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Ingresa tu contraseña"
+                            autocomplete="current-password"
+                        >
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            onclick="mostrarPasswordAdmin()"
+                            aria-label="Mostrar contraseña"
+                        >
+
+                            <i
+                                id="passwordIcon"
+                                class="bi bi-eye"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-login-button"
+                    onclick="iniciarSesionAdmin()"
+                >
+
+                    <i class="bi bi-box-arrow-in-right"></i>
+
+                    Iniciar sesión
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="admin-login-cancel"
+                    data-bs-dismiss="modal"
+                    onclick="cerrarLoginAdmin()"
+                >
+
+                    Cancelar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+                MODAL SELECCIONAR TOPPINGS
+===================================================== -->
+
+<div
+    class="modal fade"
+    id="toppingsModal"
+    tabindex="-1"
+    aria-labelledby="toppingsModalLabel"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="toppingsModalLabel"
+                >
+                    🍓 Personaliza tu producto
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <h5 id="productoToppingNombre">
+                    Producto
+                </h5>
+
+
+                <p class="text-muted">
+                    Selecciona los toppings que deseas:
+                </p>
+
+
+                <div class="topping-option">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="topping"
+                            value="Maní"
+                        >
+
+                        <span>
+                            Maní
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="topping-option">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="topping"
+                            value="Oreo"
+                        >
+
+                        <span>
+                            Oreo
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="topping-option">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="topping"
+                            value="Chispas de chocolate"
+                        >
+
+                        <span>
+                            Chispas de chocolate
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="topping-option">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="topping"
+                            value="Leche condensada"
+                        >
+
+                        <span>
+                            Leche condensada
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="topping-option">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="topping"
+                            value="Sin topping"
+                        >
+
+                        <span>
+                            Sin topping
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <p class="topping-note">
+                    Los toppings están incluidos en el precio.
+                </p>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn btn-success-custom"
+                    onclick="confirmarToppings()"
+                >
+
+                    <i class="bi bi-cart-plus"></i>
+
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+                    MODAL CARRITO
+===================================================== -->
+
+<div
+    class="modal fade"
+    id="carritoModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    🛒 Mi carrito
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div id="carritoContenido"></div>
+
+            </div>
+
+
+            <div class="modal-footer carrito-footer">
+
+                <div class="total-container">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalCarrito">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn btn-danger-custom"
+                    onclick="vaciarCarrito()"
+                >
+
+                    <i class="bi bi-trash"></i>
+
+                    Vaciar
+
+                </button>
+
+
+                <button
+                    class="btn btn-success-custom"
+                    onclick="abrirFormularioCompra()"
+                >
+
+                    Continuar compra
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+                FORMULARIO DE COMPRA
+===================================================== -->
+
+<div
+    class="modal fade"
+    id="compraModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    📝 Información de compra
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <form id="formularioCompra">
+
+                    <div class="row g-3">
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                class="form-label"
+                                for="nombreCliente"
+                            >
+                                Nombre completo *
+                            </label>
+
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombreCliente"
+                                placeholder="Ej. Juan Pérez"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                class="form-label"
+                                for="telefonoCliente"
+                            >
+                                Teléfono *
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="telefonoCliente"
+                                placeholder="Ej. 7000-0000"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label
+                                class="form-label"
+                                for="correoCliente"
+                            >
+                                Correo electrónico
+                            </label>
+
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="correoCliente"
+                                placeholder="ejemplo@gmail.com"
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                class="form-label"
+                                for="sucursalCliente"
+                            >
+                                Sucursal *
+                            </label>
+
+
+                            <select
+                                class="form-select"
+                                id="sucursalCliente"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona una sucursal
+                                </option>
+
+                                <option value="Ilopango">
+                                    Ilopango
+                                </option>
+
+                                <option value="Alta Vista">
+                                    Alta Vista
+                                </option>
+
+                                <option value="Soyapango">
+                                    Soyapango
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                class="form-label"
+                                for="fechaCliente"
+                            >
+                                Fecha de recogida *
+                            </label>
+
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                id="fechaCliente"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                class="form-label"
+                                for="horaCliente"
+                            >
+                                Hora de recogida *
+                            </label>
+
+
+                            <input
+                                type="time"
+                                class="form-control"
+                                id="horaCliente"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                class="form-label"
+                                for="metodoPago"
+                            >
+                                Método de pago *
+                            </label>
+
+
+                            <select
+                                class="form-select"
+                                id="metodoPago"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona un método
+                                </option>
+
+                                <option value="Efectivo">
+                                    💵 Efectivo
+                                </option>
+
+                                <option value="Tarjeta">
+                                    💳 Tarjeta
+                                </option>
+
+                                <option value="Transferencia">
+                                    🏦 Transferencia
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label
+                                class="form-label"
+                                for="comentariosCliente"
+                            >
+                                Comentarios del pedido
+                            </label>
+
+
+                            <textarea
+                                class="form-control"
+                                id="comentariosCliente"
+                                rows="3"
+                                placeholder="¿Alguna indicación especial?"
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-summary">
+
+                        <h4>
+                            Resumen del pedido
+                        </h4>
+
+
+                        <div id="resumenCompra"></div>
+
+
+                        <hr>
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total:
+                            </span>
+
+
+                            <strong id="totalFormulario">
+                                $0.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn confirm-button"
+                    >
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Confirmar pedido
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+                    PEDIDO REALIZADO
+===================================================== -->
+
+<div
+    class="modal fade"
+    id="pedidoExitosoModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content success-modal">
+
+            <div class="modal-body text-center">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+
+                <h2>
+                    ¡Pedido realizado!
+                </h2>
+
+
+                <p>
+                    Gracias por comprar en
+                    <strong>Cream & Berry</strong> 🍓
+                </p>
+
+
+                <div class="order-number">
+
+                    Número de pedido:
+
+                    <strong id="numeroPedido">
+                        CB-0001
+                    </strong>
+
+                </div>
+
+
+                <p class="small text-muted">
+                    Tu pedido ha sido registrado correctamente.
+                </p>
+
+
+                <button
+                    class="btn btn-primary-custom"
+                    data-bs-dismiss="modal"
+                >
+
+                    ¡Perfecto!
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+                        SCRIPTS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<script src="java.js"></script>
+
+
+</body>
+
+</html>
